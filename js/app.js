@@ -68,18 +68,22 @@ if (livingLocation === 'yes' || livingLocation === 'y'){
             //----------------------------------------sixth question------------------
             let favFood=['mansaf','shashbarak','pizza','kofta'];
             let food=prompt('what is my favorite food do you think ?').toLowerCase();
-            let counter =0;
+            let counter =true;
            for (let num =0;num<7;num++)
            {
-               for(let index=0;index<favFood.length;index++)
-               if(food!=favFood[index]){
-                   continue;
-               }
-                   alert('Yes ,My favorite foods are : '+favFood);
-                   break;
-               
-           }
-        //    food=prompt('Try again');
+               for(let index=0;index<favFood.length;index++){
+               if(food==favFood[index]){
+                alert('Yes ,My favorite foods are : '+favFood);
+                score++;
+                counter=false;
+                break;
+               } else{
+                   continue;}
+                   if (counter===false){
+                       break;}
+                       else{
+                           food=prompt('Try again');}
+            }}
             //----------------------------------------seventh question------------------
 
       let sisters= Number(prompt('Guess how meny sisters does I have ?'));
@@ -95,8 +99,7 @@ if (livingLocation === 'yes' || livingLocation === 'y'){
               alert('Too low') ;
            }
            sisters=Number(prompt('Try to guess again'));}
+
            alert('I have 4 sisters and me the middle one');
 
-        
-alert('Nice to meet you '+userName+' and thank you for your time :) ,And your score is : ' + score+' out of 7 ');
-
+   alert('Nice to meet you '+userName+' and thank you for your time :) ,And your score is : ' + score+' out of 7 ');
