@@ -27,7 +27,7 @@ alert('This is true, I studied CIS at TTU ');
 }else if(studyField === 'no' ||studyField === 'n'){
     alert('I studied CIS at TTU');
 }else{
-    alert('please enter yes/y or no/n ')
+    alert('please enter yes/y or no/n ');
 }
     //----------------------------------------third question------------------
 let livingLocation =prompt('Do you think I live in Amman,Jordan ?').toLowerCase();
@@ -69,22 +69,17 @@ if (livingLocation === 'yes' || livingLocation === 'y'){
             let favFood=['mansaf','shashbarak','pizza','kofta'];
             let food=prompt('what is my favorite food do you think ?').toLowerCase();
             let counter =0;
-            
-            while(counter<7){
-                for(let i=0;i<favFood.length;i++){
-                    if (food == favFood[i].toLowerCase()){
-                        alert('Amazing ,this is true I like it and i like all these '+ favFood);
-                        score++;
-                        break;}
-                        
-                            favFood=prompt('Try again!');
-                        }
-                    
-                    counter++;
-                }
-                
-        // alert('You have exhausted all attempts ,the correct answers are '+favFood);
-
+           for (let num =0;num<7;num++)
+           {
+               for(let index=0;index<favFood.length;index++)
+               if(food!=favFood[index]){
+                   continue;
+               }
+                   alert('Yes ,My favorite foods are : '+favFood);
+                   break;
+               
+           }
+        //    food=prompt('Try again');
             //----------------------------------------seventh question------------------
 
       let sisters= Number(prompt('Guess how meny sisters does I have ?'));
@@ -100,7 +95,7 @@ if (livingLocation === 'yes' || livingLocation === 'y'){
               alert('Too low') ;
            }
            sisters=Number(prompt('Try to guess again'));}
-           alert('You spent all the attempts,So I have 4 sisters');
+           alert('I have 4 sisters and me the middle one');
 
         
 alert('Nice to meet you '+userName+' and thank you for your time :) ,And your score is : ' + score+' out of 7 ');
