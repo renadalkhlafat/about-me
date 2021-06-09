@@ -68,22 +68,16 @@ if (livingLocation === 'yes' || livingLocation === 'y'){
             //----------------------------------------sixth question------------------
             let favFood=['mansaf','shashbarak','pizza','kofta'];
             let food=prompt('what is my favorite food do you think ?').toLowerCase();
-            let counter =true;
            for (let num =0;num<7;num++)
            {
-               for(let index=0;index<favFood.length;index++){
-               if(food==favFood[index]){
+               if(food===favFood[0] || food===favFood[1] || food===favFood [2] || food===favFood[3] ){
                 alert('Yes ,My favorite foods are : '+favFood);
                 score++;
-                counter=false;
                 break;
                } else{
-                   continue;}
-                   if (counter===false){
-                       break;}
-                       else{
-                           food=prompt('Try again');}
-            }}
+                food=prompt('Try again');
+                   }
+            }
             //----------------------------------------seventh question------------------
 
       let sisters= Number(prompt('Guess how meny sisters does I have ?'));
