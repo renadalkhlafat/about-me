@@ -6,6 +6,7 @@ body{
     font-weight:bold ;
     border:#962d2d solid 5px;
     text-align: center;
+    background: #fff8d9;
 }
 
 main h2{
@@ -53,6 +54,13 @@ header img {
     text-align: center;
     background: #fff8d9;
   }
+   ol {
+    line-height: 1.5;
+    text-indent: 20px;
+    margin-left: 20px;
+    text-align: left;
+    background: #fff8d9;
+  }
   
   /* main section:nth-child(3) p {
     margin-bottom: 5px;
@@ -79,5 +87,5 @@ footer{
     line-height: 1.5;
     background-color: #962d2d;
     color: #f6e5e9;
-    padding-top: 50px;
+    padding: 15px;
 }
